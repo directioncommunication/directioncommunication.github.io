@@ -1,0 +1,497 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Direct Communication Transport</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style type="text/css">
+			
+	.feat		h1,
+.feat h2,
+ .feat h3,
+.feat h4,
+.feat h5,
+.feat h6 {
+}
+.feat a,
+.feat a:hover,
+.feat a:focus,
+.feat a:active {
+  text-decoration: none;
+  outline: none;
+}
+
+.feat a,
+.feat a:active,
+.feat a:focus {
+  color: #333;
+  text-decoration: none;
+  transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+}
+
+.feat ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.feat img {
+  max-width: 100%;
+  height: auto;
+}
+.feat span,
+.feat a,
+.feat a:hover {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+.section-head {
+  margin-bottom: 60px;
+}
+.section-head h4 {
+  position: relative;
+  padding: 0;
+  color: #f91942;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 30px;
+}
+.section-head h4:before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #f91942;
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  right: 0;
+  margin: 0 auto;
+}
+.section-head h4 span {
+  font-weight: 700;
+  padding-bottom: 5px;
+  color: #2f2f2f;
+}
+p.service_text {
+  color: #cccccc !important;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+}
+.section-head p,
+p.awesome_line {
+  color: #818181;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.extra-text {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2f2f2f;
+  margin-bottom: 25px;
+  position: relative;
+  text-transform: none;
+}
+.extra-text::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #f91942;
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  right: 0;
+  margin: 0 auto;
+}
+.extra-text span {
+  font-weight: 700;
+  color: #f91942;
+}
+.item {
+  background: #fff;
+  text-align: center;
+  padding: 30px 25px;
+  -webkit-box-shadow: 0 0px 25px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0px 25px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  border: 5px solid rgba(0, 0, 0, 0.07);
+  margin-bottom: 30px;
+  -webkit-transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0s;
+}
+.item:hover {
+  background: #f91942;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0s;
+}
+.item:hover .item,
+.item:hover span.icon {
+  background: #fff;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0s;
+}
+.item:hover h6,
+.item:hover p {
+  color: #fff;
+  -webkit-transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0;
+  transition: all 0.5s ease 0s;
+}
+.item .icon {
+  font-size: 40px;
+  margin-bottom: 25px;
+  color: #f91942;
+  width: 90px;
+  height: 90px;
+  line-height: 96px;
+  border-radius: 50px;
+}
+.item .feature_box_col_one {
+  background: rgba(247, 198, 5, 0.2);
+  color: #f91942;
+}
+.item .feature_box_col_two {
+  background: rgba(255, 77, 28, 0.15);
+  color: #f91942;
+}
+.item .feature_box_col_three {
+  background: rgba(0, 147, 38, 0.15);
+  color: #f91942;
+}
+.item .feature_box_col_four {
+  background: rgba(0, 108, 255, 0.15);
+  color: #f91942;
+}
+.item .feature_box_col_five {
+  background: rgba(146, 39, 255, 0.15);
+  color: #f91942;
+}
+.item .feature_box_col_six {
+  background: rgba(23, 39, 246, 0.15);
+  color: #f91942;
+}
+.item p {
+  font-size: 15px;
+  line-height: 26px;
+}
+.item h6 {
+  margin-bottom: 20px;
+  color: #2f2f2f;
+}
+.mission p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.mission i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #f91942;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 25px;
+}
+.mission .small-text {
+  margin-left: 10px;
+  font-size: 13px;
+  color: #666;
+}
+.skills {
+  padding-top: 0px;
+}
+.skills .prog-item {
+  margin-bottom: 25px;
+}
+.skills .prog-item:last-child {
+  margin-bottom: 0;
+}
+.skills .prog-item p {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.skills .prog-item .skills-progress {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  position: relative;
+}
+.skills .prog-item .skills-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #f91942;
+  width: 10%;
+  border-radius: 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.skills .prog-item .skills-progress span:after {
+  content: attr(data-value);
+  position: absolute;
+  top: -5px;
+  right: 0;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 3px 7px;
+  border-radius: 30px;
+}
+
+		</style>
+
+	</head>
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1><strong><a href="index.html">Direct Communication </a></strong>Transport</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2>Transport Simplified</h2>
+				<p>We have simplified the way you transport <br />using our new technologies.</p>
+				<ul class="actions">
+					<li><a href="about.html" class="button special big">About Us</a></li>
+				</ul>
+			</section>
+
+			<!-- One -->
+				<section id="one" class="wrapper style1">
+					<div class="container 75%">
+						<div class="row 200%">
+							<div class="6u 12u$(medium)">
+								<header class="major">
+									<h2>Short About</h2>
+									<p>Moving you ahead</p>
+								</header>
+							</div>
+							<div class="6u$ 12u$(medium)">
+								<p>Since inception, we provide our clients flexible, responsive and affordable services that they deserve. We use our deep operating knowledge to offer extraordinary solutions as unique as our client’s needs. DCT (Direct Communication Transport) is specialized in offering domestic goods transportation, international goods transportation, commercial goods transportation services, industrial goods transportation along with warehousing services.
+
+</p>
+								<p>DCT provides products and services with the aim of building trust and improving the lives of consumers, small businesses, enterprises and our growing team of employees and partners.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section style="background: #f6f6f6;border-bottom:1px solid #f0f0f0">
+					<div class="feat bg-gray pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="section-head 12u"><br><br>
+          <h4><span>Why Choose</span> Us?</h4><br>
+          <p>DCT provides products and services with the aim of building trust and improving the lives of<br> consumers, small businesses, enterprises and our growing team of employees and partners. </p>
+        </div>
+        <div class="4u 12u$(small)">
+          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-truck"></i></span>
+            <h6>Door to Door Service</h6>
+            <p>All bookings are transported direct to your door.
+
+</p>
+          </div>
+        </div>
+        <div class="4u 12u$(small)">
+          <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-road"></i></span>
+            <h6>Innovative Approach</h6>
+            <p>We are always improving our procedures and streamlining our services.</p>
+          </div>
+        </div>
+        <div class="4u 12u$(small)">
+          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-suitcase"></i></span>
+            <h6>Escrow Services</h6>
+            <p>Buy online without the risk of being scammed with our escrow services.</p>
+          </div>
+        </div>
+        <div class="4u 12u$(small)">
+          <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-search"></i></span>
+            <h6>Customer Focused</h6>
+            <p>We always strive to ensure our customers are happy.
+
+
+</p>
+          </div>
+        </div>
+        <div class="4u 12u$(small)">
+          <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-tag"></i></span>
+            <h6>Ebay Purchases</h6>
+            <p>
+            	Pick up and payment of your Ebay sales and purchases.
+
+
+</p>
+          </div>
+        </div>
+        <div class="4u 12u$(small)">
+          <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-shopping-cart"></i></span>
+            <h6>Reasonable Pricing</h6>
+            <p>Online tracking of your package from within your account.
+
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+				</section>
+
+			<!-- Two -->
+				<section id="two" class="wrapper style2 special">
+					<div class="container">
+						<header class="major">
+							<h2>Cities where we are</h2>
+							<p>Currently we are only in australia, looking forward to expanding</p>
+						</header>
+						<div class="row 150%">
+							<div class="6u 12u$(small)">
+								<div class="image fit captioned">
+									<img src="https://shoplinkz.com/uploads/product/image/9634/mercedes-benz-zetros-6x6-expedition-vehicle.jpg" alt="" />
+									<h3>We guarantee safe delivery</h3>
+								</div>
+							</div>
+							<div class="6u$ 12u$(small)">
+								<div class="image fit captioned">
+									<img src="https://dovsgkvc993ul.cloudfront.net/media/content/zz/643976.jpg" alt="" />
+									<h3>We provide you the fastest way</h3>
+								</div>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><a href="#" class="button special big">Melbourne</a></li>
+							<li><a href="#" class="button big">Sydney</a></li>
+						</ul>
+					</div>
+				</section>
+
+			<!-- Three -->
+				<section id="three" class="wrapper style1">
+					<div class="container">
+						<header class="major special">
+							<h2>Some Customer Reviews</h2>
+							<p>See what our customers are saying</p>
+						</header>
+						<div class="feature-grid">
+							<div class="feature">
+								<div class="image rounded"><img src="https://clinicalproblemsolving.com/wp-content/uploads/2017/05/Goglin-Sarah-100-300x300.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4>Lara Fraser</h4>
+										<p>Transportation Head</p>
+									</header>
+									<p>Great Place to start in the trucking industry, great training. If you can stick around for 2 year youll leave with all the tools youll need to be successful.</p>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"><img src="https://www.famousbirthdays.com/headshots/steven-schipiro-4.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4>Jacob Jhua</h4>
+										<p>Manager at HOOLI</p>
+									</header>
+									<p>Tractors are newest models as the company does not keep equipment for long; dispatch works with you regard to time off for doctors appointments, birthday celebrations, etc.</p>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"><img src="https://clinicalproblemsolving.com/wp-content/uploads/2017/05/Lisa-Winston-Image-300x300.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4>Kayla Jane</h4>
+										<p>Regional Manager</p>
+									</header>
+									<p> Overall, a good company, you will be amazed how much you can grow with them. Management is awesome. Any issues get resolved ASAP.</p>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"><img src="https://www.shpreit.com/wp-content/uploads/Dan-Hansen-300x300.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4>Richard Jones</h4>
+										<p>Our Loyal Customer</p>
+									</header>
+									<p>I like the loads I was given. They paid me good . The vacation time is good for me. Medical and dental insurance is good. Much room to grow. I like working with this company.
+</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Four -->
+				<section id="four" class="wrapper style3 special">
+					<div class="container">
+						<header class="major">
+							<h2>"Moving you ahead with us"</h2>
+							<p><i>~Timothy</i></p>
+						</header>
+						<ul class="actions">
+							<li><a href="#" class="button special big">Get in touch</a></li>
+						</ul>
+					</div>
+				</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Direct Communication Transport Limited</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
